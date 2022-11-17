@@ -20,7 +20,7 @@ function App() {
   const searchMovies= async (title)=>{
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
-    console.log(data.Search);
+    setMovies(data.Search);
   }
   useEffect(()=>{
     searchMovies('Spiderman');
@@ -40,9 +40,23 @@ function App() {
         }}
         />
       </div>
-      <div className='container'>
-        <MovieCard movie1={movie1}/>
-      </div>
+
+        {
+          movies?.length>0
+            ?(
+              <div className='container'>
+                <MovieCard movie1={movies[0]}/>
+              </div>
+            ): (
+              <div className='empty'>
+                <h2>No Movies Found</h2>
+              </div>
+            )
+        }
+
+      /*<div className='container'>
+        <MovieCard movie1={movies[0]}/>
+      </div>*/
     </div>
   );
 }
