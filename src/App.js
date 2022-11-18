@@ -4,7 +4,7 @@ import SearchIcon from './search.svg';
 import MovieCard from './MovieCard';
 
 //key 6239be83
-const API_URL='http://www.omdbapi.com?apikey=6239be83';
+const API_URL='https://www.omdbapi.com?apikey=6239be83';
 const movie1 = {
     "Title": "Amazing Spiderman Syndrome",
     "Year": "2012",
@@ -23,7 +23,7 @@ function App() {
     setMovies(data.Search);
   }
   useEffect(()=>{
-    searchMovies('Spiderman');
+    searchMovies('Spider');
   }, []);
 
   return (
