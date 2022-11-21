@@ -33,6 +33,10 @@ function App() {
         <input placeholder='Search For Movies' value={searchTerm} 
         onChange={(e)=>{
           setSearchTerm(e.target.value)
+        }} onKeyDown={(e)=>{
+          if(e.key==="Enter"){
+            searchMovies(searchTerm);
+          }
         }}
         />
         <img src = {SearchIcon} alt='search' onClick={()=>{
