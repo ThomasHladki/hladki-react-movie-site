@@ -3,16 +3,7 @@ import React, { useEffect, useState } from 'react';
 import SearchIcon from './search.svg';
 import MovieCard from './MovieCard';
 
-//key 6239be83
 const API_URL='https://www.omdbapi.com?apikey=6239be83';
-const movie1 = {
-    "Title": "Amazing Spiderman Syndrome",
-    "Year": "2012",
-    "imdbID": "tt2586634",
-    "Type": "movie",
-    "Poster": "N/A"
-}
-
 
 function App() {
   const [movies, setMovies]=useState([]);
