@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "homepage": "https://react-movieland-007c93.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -39,6 +40,6 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
-  },
-  "homepage": "http://ThomasHladki.github.io/hladki-react-movie-site"
+  }
+  
 }
